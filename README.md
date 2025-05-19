@@ -2,7 +2,7 @@
 
 A modern and responsive admin dashboard UI designed for monitoring cybersecurity assets, scanning data, and visualizing protection metrics.
 
-![CyberX Dashboard Screenshot](img/cyberx_dashboard.png)
+![CyberX Dashboard](./img/cyberx_dashboard.png)
 
 ## 🧩 Features
 
@@ -18,12 +18,12 @@ A modern and responsive admin dashboard UI designed for monitoring cybersecurity
 
 apps/
 └── react_dashboard/
-├── public/
+├── public/ # Contains JS/CSS assets (e.g., compiled React)
 ├── templates/
-│ └── dashboard.html # Main HTML UI
+│ └── dashboard.html # Main HTML page for dashboard view
 ├── img/
-│ └── cyberx_dashboard.png
-└── README.md
+│ └── cyberx_dashboard.png # Screenshot of the dashboard UI
+└── README.md # You're here
 
 ## 🛠️ Installation
 
