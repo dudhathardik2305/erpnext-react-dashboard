@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CyberX Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f6f8fc;
+      display: flex;
+      color: #1e1e2f;
+    }
+
+    aside {
+      width: 240px;
+      background-color: #131722;
+      color: white;
+      min-height: 100vh;
+      padding: 30px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    aside h1 {
+      color: #5f8bff;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .menu-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px;
+      border-radius: 8px;
+      background-color: #1e2230;
+      color: white;
+      font-weight: 500;
+    }
+
+    .menu-item.active {
+      background: linear-gradient(90deg, #5f8bff, #8a6fff);
+    }
+
+    .submenu {
+      margin-left: 12px;
+      font-size: 14px;
+      color: #bbb;
+    }
+
+    main {
+      flex: 1;
+      padding: 20px 40px;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .header input {
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      width: 300px;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .card {
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+
+    .bonus-card {
+      grid-column: span 2;
+      background: linear-gradient(135deg, #7e5dfe, #693eff);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .bonus-card button {
+      padding: 10px 14px;
+      border: none;
+      border-radius: 8px;
+      background-color: white;
+      color: #693eff;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .chart {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      margin-bottom: 20px;
+    }
+
+    .side-widgets {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 20px;
+    }
+
+    .protection-card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+
+    .circle {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 10px solid #5f8bff;
+      margin: 0 auto 10px;
+      position: relative;
+    }
+
+    .circle::before {
+      content: '80%';
+      position: absolute;
+      top: 35%;
+      left: 25%;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .issue-list {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+
+    .issue {
+      margin-bottom: 10px;
+    }
+
+    .bar {
+      height: 8px;
+      background-color: #eee;
+      border-radius: 4px;
+      overflow: hidden;
+      margin-top: 4px;
+    }
+
+    .bar span {
+      display: block;
+      height: 8px;
+      border-radius: 4px;
+    }
+
+    .simple span { width: 50%; background-color: #ff6b6b; }
+    .medium span { width: 25%; background-color: #ffa94d; }
+    .complex span { width: 10%; background-color: #4dabf7; }
+  </style>
+</head>
+<body>
+  <aside>
+    <h1>Cyber<span style="color:#5f8bff;">X</span></h1>
+    <div class="menu-item active">Home</div>
+    <div class="menu-item">Affiliates</div>
+    <div class="menu-item">ID Monitoring</div>
+    <div class="submenu">Distributed tracing</div>
+    <div class="submenu">Errors</div>
+    <div class="submenu">Alert conditions</div>
+    <div class="menu-item">Database</div>
+    <div class="menu-item">Apps</div>
+    <div class="menu-item">Alert</div>
+    <div class="menu-item">Integration</div>
+    <div class="menu-item">Log out</div>
+  </aside>
+  <main>
+    <div class="header">
+      <input type="text" placeholder="Search project, folder or file">
+      <div>
+        <span>Last Week | Last Month</span>
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User" style="width: 40px; height: 40px; border-radius: 50%; margin-left: 20px;">
+      </div>
+    </div>
+
+    <div class="card-grid">
+      <div class="card">Local name<br><strong>WINPQR-24</strong></div>
+      <div class="card">Registered On<br><strong>2023-01-02 2:00PM</strong></div>
+      <div class="card">Scheduled Assets<br><strong>131 (Subdomain - 5)</strong></div>
+      <div class="card">Agent<br><strong>v1.0.0.8</strong></div>
+      <div class="card bonus-card">
+        <div>
+          <p>Bonus of the month</p>
+          <h3>You have Bonus $100<br>10 Free Spins</h3>
+          <button>Claim Bonus</button>
+        </div>
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Bonus" width="80"/>
+      </div>
+    </div>
+
+    <div class="side-widgets">
+      <div class="chart">
+        <h3>File Activity</h3>
+        <img src="https://www.chartjs.org/media/logo-title.svg" alt="Chart Placeholder" style="width:100%; height: 180px; object-fit: contain;">
+      </div>
+      <div>
+        <div class="protection-card">
+          <div class="circle"></div>
+          <h4>Average Protection</h4>
+          <p>Check what you can do to be fully protected</p>
+        </div>
+        <div class="issue-list">
+          <h4>262 issues total</h4>
+          <div class="issue simple">Simple (50%)<div class="bar"><span></span></div></div>
+          <div class="issue medium">Medium (25%)<div class="bar"><span></span></div></div>
+          <div class="issue complex">Complex (10%)<div class="bar"><span></span></div></div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

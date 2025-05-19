@@ -1,7 +1,42 @@
-## React Dashboard
+# CyberX Dashboard UI
 
-This app is for React dashboard
+A modern and responsive admin dashboard UI designed for monitoring cybersecurity assets, scanning data, and visualizing protection metrics.
 
-#### License
+![CyberX Dashboard Screenshot](img/cyberx_dashboard.png)
 
-MIT
+## 🧩 Features
+
+- Sidebar with navigation menu
+- Local machine and agent metadata display
+- Bonus reward section
+- File scan activity charts
+- Real-time protection status
+- Issue breakdown (Simple, Medium, Complex)
+- Responsive layout and clean design
+
+## 📁 Project Structure
+
+apps/
+└── react_dashboard/
+├── public/
+├── templates/
+│ └── dashboard.html # Main HTML UI
+├── img/
+│ └── cyberx_dashboard.png
+└── README.md
+
+## 🛠️ Installation
+
+1. Place this folder in your `frappe-bench/apps/` directory:
+
+```bash
+cd ~/frappe-bench/apps/
+git clone https://github.com/your-username/react_dashboard.git
+
+cd ~/frappe-bench
+bench --site your-site-name install-app react_dashboard
+
+
+bench start
+
+Visit: http://localhost:8000/dashboard
