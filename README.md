@@ -2,7 +2,8 @@
 
 A modern and responsive admin dashboard UI designed for monitoring cybersecurity assets, scanning data, and visualizing protection metrics.
 
-![CyberX Dashboard](./img/cyberx_dashboard.png)
+![CyberX Dashboard](./img/Dashboard_1.png)
+
 
 ## 🧩 Features
 
@@ -26,8 +27,7 @@ apps/
 └── README.md # You're here
 
 ## 🛠️ Installation
-
-1. Place this folder in your `frappe-bench/apps/` directory:
+Place this folder in your `frappe-bench/apps/` directory:
 
 ```bash
 cd ~/frappe-bench/apps/
