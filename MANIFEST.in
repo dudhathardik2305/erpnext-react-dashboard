@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include react_dashboard *.css
+recursive-include react_dashboard *.csv
+recursive-include react_dashboard *.html
+recursive-include react_dashboard *.ico
+recursive-include react_dashboard *.js
+recursive-include react_dashboard *.json
+recursive-include react_dashboard *.md
+recursive-include react_dashboard *.png
+recursive-include react_dashboard *.py
+recursive-include react_dashboard *.svg
+recursive-include react_dashboard *.txt
+recursive-exclude react_dashboard *.pyc
